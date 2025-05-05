@@ -1,43 +1,41 @@
-import 'package:flutter/material.dart';
+import "package:RiveraWidgets/homeScreen.dart";
+import "package:RiveraWidgets/widget22.dart";
+import "package:RiveraWidgets/widget23.dart";
+import "package:RiveraWidgets/widget24.dart";
+import "package:RiveraWidgets/widget25.dart";
+import "package:RiveraWidgets/widget26.dart";
+import "package:RiveraWidgets/widget27.dart";
+import "package:RiveraWidgets/widget28.dart";
+import "package:RiveraWidgets/widget29.dart";
+import "package:RiveraWidgets/widget30.dart";
+import "package:RiveraWidgets/widget31.dart";
+import "package:flutter/material.dart";
 
-void main() => runApp(MyApp());
+void main() => runApp(MirutasApp());
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-  // This widget is the root of your application.
+class MirutasApp extends StatelessWidget {
+  const MirutasApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // Application name
-      title: 'Flutter Hello World',
-      // Application theme data, you can set the colors for the application as
-      // you want
-      theme: ThemeData(
-        // useMaterial3: false,
-        primarySwatch: Colors.blue,
-      ),
-      // A widget which will be started on application startup
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  final String title;
-  const MyHomePage({super.key, required this.title});  
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        // The title text which will be shown on the action bar
-        title: Text(title),
-      ),
-      body: Center(
-        child: Text(
-          'Hello, World!',
-        ),
-      ),
+      //showSemanticsDebugger: true,
+      debugShowCheckedModeBanner: false,
+      title: "Entre paginas routes",
+      initialRoute: "/",
+      routes: {
+        "/": (context) => const HomeScreen(),
+        "/AspectRatio": (context) => const Widget22(),
+        "/Autocomplete": (context) => const Widget23(),
+        "/BackdropFilter": (context) => const Widget24(),
+        "/Banner": (context) => const Widget25(),
+        "/Baseline": (context) => const Widget26(),
+        "/BlockSemantics": (context) => const Widget27(),
+        "/BottomNavigationBar": (context) => const Widget28(),
+        "/BottomSheet": (context) => const Widget29(),
+        "/Builder": (context) => const Widget30(),
+        "/Card": (context) => const Widget31(),
+      },
     );
   }
 }
